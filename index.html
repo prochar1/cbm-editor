@@ -22,7 +22,9 @@
   </head>
   <body class="h-full bg-slate-100 flex flex-col overflow-hidden">
     <!-- Header -->
-    <header class="flex items-center gap-3 px-5 py-2.5 bg-slate-800 text-white shadow shrink-0">
+    <header
+      class="flex items-center gap-3 px-5 py-2.5 bg-slate-800 text-white shadow shrink-0"
+    >
       <span class="text-base font-bold tracking-tight">CBM Editor</span>
       <span class="text-slate-400 text-sm">Content Block Markup</span>
       <div class="ml-auto flex items-center gap-1 text-xs text-slate-400">
@@ -33,17 +35,24 @@
 
     <!-- Panel labels -->
     <div class="flex shrink-0 border-b border-slate-200 bg-white">
-      <div class="flex-1 flex items-center gap-2 px-5 py-2 border-r border-slate-200 text-xs font-semibold text-slate-500 uppercase tracking-wider">
+      <div
+        class="flex-1 flex items-center gap-2 px-5 py-2 border-r border-slate-200 text-xs font-semibold text-slate-500 uppercase tracking-wider"
+      >
         <span>✏️</span> Textový editor
       </div>
-      <div class="flex-1 flex items-center gap-2 px-5 py-2 text-xs font-semibold text-slate-500 uppercase tracking-wider">
+      <div
+        class="flex-1 flex items-center gap-2 px-5 py-2 text-xs font-semibold text-slate-500 uppercase tracking-wider"
+      >
         <span>📋</span> Formulářový builder
       </div>
     </div>
 
     <!-- Split panels -->
     <div class="flex flex-1 overflow-hidden">
-      <div id="editor" class="flex-1 overflow-auto border-r border-slate-200"></div>
+      <div
+        id="editor"
+        class="flex-1 overflow-auto border-r border-slate-200"
+      ></div>
       <div id="form-builder" class="flex-1 overflow-hidden"></div>
     </div>
 

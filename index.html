@@ -27,9 +27,13 @@
     >
       <span class="text-base font-bold tracking-tight">CBM Editor</span>
       <span class="text-slate-400 text-sm">Content Block Markup</span>
-      <div class="ml-auto flex items-center gap-1 text-xs text-slate-400">
-        <span class="w-2 h-2 rounded-full bg-green-400 inline-block"></span>
-        auto-sync
+      <div class="ml-auto">
+        <button
+          id="btn-download"
+          class="flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white transition"
+        >
+          ⬇ Stáhnout .txt
+        </button>
       </div>
     </header>
 
@@ -56,6 +60,6 @@
       <div id="form-builder" class="flex-1 overflow-hidden"></div>
     </div>
 
-    <script type="module" src="./src/demo.js"></script>
+    <script type="module" src="./src/main.js"></script>
   </body>
 </html>

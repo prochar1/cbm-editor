@@ -1,47 +1,22 @@
 {
-  "name": "codemirror-lang-cbm",
+  "name": "cbm-editor",
   "version": "1.0.0",
-  "description": "CodeMirror 6 syntax highlighting for the CBM (Content Block Markup) format",
+  "description": "CBM (Content Block Markup) editor – desktopová webová aplikace",
   "type": "module",
-  "main": "dist/cbm-editor.cjs.js",
-  "module": "dist/cbm-editor.es.js",
-  "exports": {
-    ".": {
-      "import": "./dist/cbm-editor.es.js",
-      "require": "./dist/cbm-editor.cjs.js"
-    }
-  },
-  "files": [
-    "dist",
-    "src/cbm-language.js",
-    "src/index.js"
-  ],
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
   },
-  "keywords": [
-    "codemirror",
-    "codemirror6",
-    "syntax-highlighting",
-    "cbm",
-    "content-block-markup",
-    "editor"
-  ],
   "author": "",
   "license": "MIT",
-  "peerDependencies": {
-    "@codemirror/language": "^6.0.0",
-    "@codemirror/state": "^6.0.0",
-    "@codemirror/view": "^6.0.0",
-    "codemirror": "^6.0.0"
-  },
-  "devDependencies": {
+  "dependencies": {
     "@codemirror/language": "^6.10.0",
     "@codemirror/state": "^6.5.4",
     "@codemirror/view": "^6.39.16",
-    "codemirror": "^6.0.2",
+    "codemirror": "^6.0.2"
+  },
+  "devDependencies": {
     "vite": "^7.3.1"
   }
 }

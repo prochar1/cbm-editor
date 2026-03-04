@@ -1,0 +1,14 @@
+{
+  "chat.tools.terminal.autoApprove": {
+    "/^echo \"export function formatTypography\\(text: string\\): string \\{\n    if \\(!text\\) return '';\n    return text\\.replace\\(/\\(\\^\\|\\\\s\\)\\(\\[vkszouiaVKSZOUIA\\]\\)\\\\s\\+\\(\\?=\\\\S\\)/g, \"\"`\\\\\\$1`\\\\\\$2\\u00A0\"\"\\);\n\\}\" \\| Out-File -Encoding utf8 src/utils/typography\\.ts$/": {
+      "approve": true,
+      "matchCommandLine": true
+    }
+  },
+  "files.associations": {
+    "**/public/content/*.txt": "vitkovfmt",
+    "cs.txt": "vitkovfmt",
+    "en.txt": "vitkovfmt",
+    "config.txt": "vitkovfmt"
+  }
+}

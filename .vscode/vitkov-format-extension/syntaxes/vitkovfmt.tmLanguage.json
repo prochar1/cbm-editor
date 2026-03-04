@@ -1,0 +1,132 @@
+{
+  "scopeName": "source.vitkovfmt",
+  "name": "VitkovFormat",
+  "patterns": [
+    {
+      "include": "#comments"
+    },
+    {
+      "include": "#page-separators"
+    },
+    {
+      "include": "#directives"
+    },
+    {
+      "include": "#quiz-lines"
+    },
+    {
+      "include": "#media-line"
+    },
+    {
+      "include": "#markdown"
+    }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.line.double-slash.vitkovfmt",
+          "match": "^\\s*//.*$"
+        }
+      ]
+    },
+    "page-separators": {
+      "patterns": [
+        {
+          "name": "entity.name.section.page.vitkovfmt",
+          "match": "^\\s*#+\\s*$"
+        }
+      ]
+    },
+    "directives": {
+      "patterns": [
+        {
+          "captures": {
+            "1": {
+              "name": "keyword.control.directive.vitkovfmt"
+            },
+            "2": {
+              "name": "punctuation.separator.key-value.vitkovfmt"
+            }
+          },
+          "match": "^\\s*(@(?:rootId|menu|id|parentId|image|excerpt|title|block|poster|questionCount))\\s*(:)"
+        },
+        {
+          "name": "entity.name.function.block.vitkovfmt",
+          "match": "^\\s*@block:\\s*(text|gallery|video|audio|quiz|pexeso)\\b"
+        }
+      ]
+    },
+    "quiz-lines": {
+      "patterns": [
+        {
+          "captures": {
+            "1": {
+              "name": "punctuation.definition.question.vitkovfmt"
+            }
+          },
+          "match": "^(\\s*\\?)\\s*.*$"
+        },
+        {
+          "captures": {
+            "1": {
+              "name": "keyword.other.correct-answer.vitkovfmt"
+            }
+          },
+          "match": "^\\s*-\\s*(\\(\\*\\))?.*$"
+        }
+      ]
+    },
+    "media-line": {
+      "patterns": [
+        {
+          "name": "string.unquoted.media-path.vitkovfmt",
+          "match": "\\b\\S+\\.(?:jpg|jpeg|png|webp|gif|mp4|mp3)\\b"
+        }
+      ]
+    },
+    "markdown": {
+      "patterns": [
+        {
+          "name": "markup.heading.markdown.vitkovfmt",
+          "match": "^\\s{0,3}(#{1,6})\\s+.+$"
+        },
+        {
+          "name": "markup.quote.markdown.vitkovfmt",
+          "match": "^\\s*>\\s+.*$"
+        },
+        {
+          "name": "markup.list.unnumbered.markdown.vitkovfmt",
+          "match": "^\\s*(?:[-*+])\\s+.+$"
+        },
+        {
+          "name": "markup.list.numbered.markdown.vitkovfmt",
+          "match": "^\\s*\\d+\\.\\s+.+$"
+        },
+        {
+          "name": "markup.bold.markdown.vitkovfmt",
+          "match": "(?:\\*\\*|__)(?=\\S)([\\s\\S]*?\\S)(?:\\*\\*|__)"
+        },
+        {
+          "name": "markup.italic.markdown.vitkovfmt",
+          "match": "(?:\\*|_)(?=\\S)([^\\r\\n]*?\\S)(?:\\*|_)"
+        },
+        {
+          "name": "markup.raw.inline.markdown.vitkovfmt",
+          "match": "`[^`]+`"
+        },
+        {
+          "captures": {
+            "1": {
+              "name": "string.other.link.title.markdown.vitkovfmt"
+            },
+            "2": {
+              "name": "markup.underline.link.markdown.vitkovfmt"
+            }
+          },
+          "match": "\\[([^\\]]+)\\]\\(([^)\\s]+(?:\\s+\"[^\"]*\")?)\\)"
+        }
+      ]
+    }
+  }
+}

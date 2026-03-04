@@ -1,0 +1,175 @@
+@menu: home (Úvod)
+@menu: history (Historie)
+@menu: nature (Příroda)
+
+################################################
+@id: home
+@title: Úvodní stránka
+
+Vítejte v naší **interaktivní expozici**. Zvolte prosím jednu ze dvou
+hlavních kategorií níže
+![](assets/1020.jpg)
+a prozkoumejte bohatství informací, které jsme pro vás připravili.
+
+################################################
+@id: history
+@parentId: home
+@title: Historie a pověsti
+@image: assets/1020.jpg
+@excerpt: Město prošlo mnoha epochami. 
+Prozkoumejte, co se dochovalo z **dávné minulosti**.
+Můžete zde najít mnoho zajímavostí.
+
+Tato sekce se věnuje historii. Město prošlo mnoha epochami a
+každé období zanechalo zajímavé stopy. Zde si můžete prohlédnout,
+co se dochovalo. Vyberte si detail pro více informací.
+
+################################################
+@id: fotos
+@parentId: history
+@title: Dobové fotografie
+@image: assets/1021.jpg
+@excerpt: Galerie snímků zachycující podobu náměstí, továren i každodenního života chudší částí obyvatel.
+
+Nahlédněte do minulosti prostřednictvím naší galerie historických fotografií.
+Snímky zachycují dávnou podobu náměstí, staré továrny i odpočinek
+obyvatel na venkově. Všimněte si, jak se měnila móda v průběhu desetiletí.
+
+@block: gallery
+assets/1020.jpg (Údolí)
+assets/1021.jpg (Architektura)
+assets/1022.jpg (
+Toto je **víceřádkový** text k poslednímu obrázku.
+Klidně i se třetím řádkem, ale hezky bezpečně v závorkách.
+)
+
+################################################
+@id: talk
+@parentId: history
+@title: Pověsti a vyprávění
+@image: assets/1022.jpg
+@excerpt: Poslechněte si poutavé legendy a záhadné příběhy starousedlíků.
+
+Každé staré město má své legendy. Poslechněte si poutavé
+vyprávění o starobylých dobách, záhadných úkazech v nedalekých
+lesích a podivuhodných osudech zdejších obyvatel. Zvukový
+záznam vás přenese do atmosféry starých časů.
+
+@block: audio
+@title: Vyprávění místních starousedlíků
+assets/song.mp3
+
+################################################
+@id: game
+@parentId: history
+@title: Historické pexeso
+@image: assets/1023.jpg
+@excerpt: Otestujte své znalosti v historickém pexesu a odpovězte na všechny otázky bez chyby.
+
+Máte rádi zajímavé výzvy? Vyzkoušejte si zahrát naši historickou hru,
+kde je vaším úkolem správně odpovídat na klíčové otázky a seřadit události.
+Zvládnete odpovědět na všechny otázky bez chyby?
+
+@block: pexeso
+@blockId: 1
+@backImage: assets/1020.jpg
+assets/1020.jpg (Údolí)
+assets/1021.jpg (Architektura)
+assets/1022.jpg (Lidé)
+assets/1023.jpg (Příroda)
+assets/1024.jpg (Stromy)
+assets/1023.jpg (Kvíz)
+
+################################################
+@id: game1
+@parentId: history
+@title: Historický kvíz
+@image: assets/1023.jpg
+@excerpt: Otestujte své znalosti o historii a přírodě v tomto otázkovém kvízu s náhodnými otázkami.
+
+Otestujte své znalosti v historickém kvízu. Z celkové banky otázek
+bude náhodně vybráno deset, v náhodném pořadí. Odpovězte správně
+na co nejvíce otázek a porovnejte svůj výsledek se skóre ostatních.
+
+@block: quiz
+@blockId: 3
+@questionCount: 5
+
+? Jak se jmenuje nejvyšší hora České republiky?
+- (*) Sněžka
+- Praděd
+- Lysá hora
+- Králický Sněžník
+
+? Ve kterém roce vznikla samostatná Česká republika?
+- (*) 1993
+- 1989
+- 1918
+- 1968
+
+? Jak se nazývá řeka protékající Prahou?
+- (*) Vltava
+- Labe
+- Morava
+- Odra
+
+################################################
+@id: nature
+@parentId: home
+@title: Příroda a okolí
+@image: assets/1024.jpg
+@excerpt: Příroda Oderských vrchů skrývá bohatství lesů, zvířat i krajiny.
+
+Zdejší příroda nabízí mnoho unikátních přírodních úkazů. Můžete zde
+nalézt vzácné druhy rostlin a živočichů, hluboké lesy a čisté
+potoky. Tato sekce vás provede přírodním bohatstvím naší oblasti.
+
+################################################
+@id: animals
+@parentId: nature
+@title: Místní fauna
+@image: assets/1020.jpg
+@excerpt: Seznamte se s divokými obyvateli našich lesů od drobného hmyzu po velké savce.
+
+Oderské vrchy jsou domovem pro pestrou paletu živočišných druhů.
+Na těchto fotografiích můžete vidět některé z nich, od drobných
+obojživelníků až po jelení zvěř. Prohlédněte si snímky v naší galerii.
+
+@block: gallery
+assets/1021.jpg (Zvíře)
+assets/1022.jpg (Pták)
+assets/1023.jpg (Hmyz)
+
+################################################
+@id: plants
+@parentId: nature
+@title: Vzácná flóra
+@image: assets/1021.jpg
+@excerpt: Objevte chráněné rostliny a starobylé stromy ukryté hluboko v lesích.
+
+Pro milovníky botaniky je tento region rájem. Rostou zde
+vzácné orchideje a v lesích lze nalézt staré, památné stromy,
+které pamatují staletí. Zjistěte více o lokální květeně.
+
+![Vzácný exemplář místní flóry](assets/1023.jpg)
+
+################################################
+@id: nature_game
+@parentId: nature
+@title: Přírodní pexeso
+@image: assets/1023.jpg
+@excerpt: Zábavná hra pexeso pro malé i velké s motivy přírody.
+
+Zahrajte si naše přírodní pexeso a procvičte si postřeh.
+Najděte všechny páry fotografií zvířat a rostlin z okolí
+v co nejkratším čase.
+
+@block: pexeso
+@blockId: 2
+//@backImage: assets/1021.jpg
+assets/1020.jpg (Strom)
+assets/1021.jpg (Zvíře)
+assets/1022.jpg (Pták)
+assets/1023.jpg (Květina)
+assets/1024.jpg (Prales)
+assets/1023.jpg (Hmyz)

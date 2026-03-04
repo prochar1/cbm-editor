@@ -1,0 +1,52 @@
+{
+  "name": "vitkov-custom-format",
+  "displayName": "Vitkov Custom Format",
+  "description": "Syntax highlighting and formatting for Vitkov content text format",
+  "version": "0.0.1",
+  "publisher": "local",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Formatters"
+  ],
+  "activationEvents": [
+    "onLanguage:vitkovfmt"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "vitkovfmt",
+        "aliases": [
+          "VitkovFormat",
+          "vitkovfmt"
+        ],
+        "extensions": [
+          ".vitkov",
+          ".vfmt",
+          ".contenttxt"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "vitkovfmt",
+        "scopeName": "source.vitkovfmt",
+        "path": "./syntaxes/vitkovfmt.tmLanguage.json"
+      }
+    ]
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@vscode/vsce": "^3.7.1"
+  }
+}

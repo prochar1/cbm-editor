@@ -9,6 +9,9 @@ export const cbmExtension = StreamLanguage.define(cbmLanguage);
 // Přímý přístup k language definici pro pokročilé uživatele
 export { cbmLanguage };
 
+// Formulářový builder – alternativa k textovému editoru
+export { createCbmForm, parseCbm } from "./cbm-form.js";
+
 const initialText = `@menu: home (Úvod)
 @menu: history (Historie)
 

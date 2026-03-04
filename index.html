@@ -1,23 +1,52 @@
 <!doctype html>
-<html lang="cs">
+<html lang="cs" class="h-full">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CBM Editor Demo</title>
+    <title>CBM Editor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-      body {
-        font-family: sans-serif;
-        padding: 20px;
-      }
-      #editor {
-        border: 1px solid #ccc;
-        max-width: 800px;
+      /* CodeMirror fill */
+      #editor .cm-editor { height: 100%; }
+      #editor .cm-scroller { overflow: auto; }
+      /* Tailwind dynamic class safelist (used in cbm-form.js) */
+      .cbm-safelist {
+        border-l-blue-500 bg-blue-50 text-blue-800 border-l-transparent
+        border-violet-200 bg-violet-50 text-violet-700
+        border-amber-200 bg-amber-50 text-amber-700
+        border-emerald-200 bg-emerald-50 text-emerald-700
+        border-sky-200 bg-sky-50 text-sky-700
+        accent-green-500 w-[calc(100%-1rem)] min-h-[80px] min-h-[560px]
       }
     </style>
   </head>
-  <body>
-    <h1>CBM (Content Block Markup) Editor</h1>
-    <div id="editor"></div>
+  <body class="h-full bg-slate-100 flex flex-col overflow-hidden">
+    <!-- Header -->
+    <header class="flex items-center gap-3 px-5 py-2.5 bg-slate-800 text-white shadow shrink-0">
+      <span class="text-base font-bold tracking-tight">CBM Editor</span>
+      <span class="text-slate-400 text-sm">Content Block Markup</span>
+      <div class="ml-auto flex items-center gap-1 text-xs text-slate-400">
+        <span class="w-2 h-2 rounded-full bg-green-400 inline-block"></span>
+        auto-sync
+      </div>
+    </header>
+
+    <!-- Panel labels -->
+    <div class="flex shrink-0 border-b border-slate-200 bg-white">
+      <div class="flex-1 flex items-center gap-2 px-5 py-2 border-r border-slate-200 text-xs font-semibold text-slate-500 uppercase tracking-wider">
+        <span>✏️</span> Textový editor
+      </div>
+      <div class="flex-1 flex items-center gap-2 px-5 py-2 text-xs font-semibold text-slate-500 uppercase tracking-wider">
+        <span>📋</span> Formulářový builder
+      </div>
+    </div>
+
+    <!-- Split panels -->
+    <div class="flex flex-1 overflow-hidden">
+      <div id="editor" class="flex-1 overflow-auto border-r border-slate-200"></div>
+      <div id="form-builder" class="flex-1 overflow-hidden"></div>
+    </div>
+
     <script type="module" src="./src/demo.js"></script>
   </body>
 </html>

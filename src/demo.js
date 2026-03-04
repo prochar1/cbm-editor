@@ -1,7 +1,11 @@
 import { EditorView, basicSetup } from "codemirror";
 import { EditorState } from "@codemirror/state";
-import { cbmExtension } from "./index.js";
+import { cbmExtension, createCbmForm, parseCbm } from "./index.js";
 
+// ── Sdílený flag proti sync smyčce ─────────────────────────────────────────
+let syncing = false;
+
+// ── Textový editor ────────────────────────────────────────────────────────
 const doc = `@menu: home (Úvod)
 @menu: history (Historie)
 @menu: nature (Příroda)
@@ -42,14 +46,38 @@ assets/1021.jpg (Architektura)
 // Toto je komentář
 `;
 
+// ── Formulářový builder ────────────────────────────────────────────────────────
+const formEl = document.getElementById("form-builder");
+const form = formEl
+  ? createCbmForm(formEl, {
+      initialData: parseCbm(doc),
+      onChange: (text) => {
+        if (syncing) return;
+        syncing = true;
+        editorView.dispatch({
+          changes: { from: 0, to: editorView.state.doc.length, insert: text },
+        });
+        syncing = false;
+      },
+    })
+  : null;
+
+// ── Textový editor ────────────────────────────────────────────────────────
 const editorElement = document.getElementById("editor");
 
-if (editorElement) {
-  new EditorView({
-    state: EditorState.create({
-      doc,
-      extensions: [basicSetup, cbmExtension],
-    }),
-    parent: editorElement,
-  });
-}
+const editorView = new EditorView({
+  state: EditorState.create({
+    doc,
+    extensions: [
+      basicSetup,
+      cbmExtension,
+      EditorView.updateListener.of((update) => {
+        if (!update.docChanged || syncing || !form) return;
+        syncing = true;
+        form.setState(parseCbm(update.state.doc.toString()));
+        syncing = false;
+      }),
+    ],
+  }),
+  parent: editorElement,
+});

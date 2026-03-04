@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+/* CodeMirror dark theme */
+#editor .cm-editor {
+  height: 100%;
+  background: #0f172a;
+  color: #cbd5e1;
+}
+#editor .cm-scroller {
+  overflow: auto;
+}
+#editor .cm-gutters {
+  background: #1e293b;
+  border-right: 1px solid #334155;
+  color: #475569;
+}
+#editor .cm-activeLineGutter {
+  background: #1e293b;
+}
+#editor .cm-activeLine {
+  background: rgba(255, 255, 255, 0.04);
+}
+#editor .cm-selectionBackground,
+#editor .cm-focused .cm-selectionBackground {
+  background: rgba(59, 130, 246, 0.25) !important;
+}
+#editor .cm-cursor {
+  border-left-color: #94a3b8;
+}
+#editor .cm-content {
+  caret-color: #94a3b8;
+}
+#editor .cm-tooltip {
+  background: #1e293b;
+  border: 1px solid #334155;
+  color: #cbd5e1;
+}

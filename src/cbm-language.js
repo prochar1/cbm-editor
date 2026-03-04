@@ -29,8 +29,10 @@ export const cbmLanguage = {
     if (stream.match(/^- \(\*\) .*/)) return "string"; // Správná odpověď v kvízu
     if (stream.match(/^- .*/)) return "variableName"; // Špatná odpověď v kvízu
 
-    // Fotogalerie obrázky
-    if (stream.match(/^assets\/[^\s]+ \((.*?)\)/)) return "string";
+    // Cesty k souborům – s popiskem i bez (galerie, pexeso, audio)
+    // Shoduje: assets/foto.jpg (popisek)  nebo  data/audio/zvuk.mp3
+    if (stream.match(/^[\w.][\w.\-/]*\/[\w.\-/]+(\s+\([^)]*\))?/))
+      return "string";
 
     // Simple bold markdown
     let ch = stream.next();

@@ -1,5 +1,6 @@
 import { defineConfig } from "vite";
+import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
-  // Standard app build – Vite uses index.html as entry
+  plugins: [tailwindcss()],
 });

@@ -14,7 +14,9 @@
     "@codemirror/language": "^6.10.0",
     "@codemirror/state": "^6.5.4",
     "@codemirror/view": "^6.39.16",
-    "codemirror": "^6.0.2"
+    "@tailwindcss/vite": "^4.2.1",
+    "codemirror": "^6.0.2",
+    "tailwindcss": "^4.2.1"
   },
   "devDependencies": {
     "vite": "^7.3.1"
